@@ -11,20 +11,26 @@
             height:360px;
             width: 100%;
             object-fit:cover;
+            margin-bottom: 16px;
         }
     </style>
-
-        
     </head>
     <body>
+        {% include 'nav.html' %}
+        <img id='banner' class="img-fluid" src="static/banner.jpeg">
         <div class='container'>
         <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-        <img id='banner' class="img-fluid" src="static/banner.jpeg">
+        
         <h2 class="text-center mt-2 mb-4">About Website</h2>
+        <div class='row'>
+            <div class="col-md-6" style="margin-bottom:16px;">
         <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et malesuada fames ac. In fermentum et sollicitudin ac. Non blandit massa enim nec dui. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Turpis nunc eget lorem dolor. Nunc faucibus a pellentesque sit amet porttitor. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Sodales ut etiam sit amet nisl purus. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Dui faucibus in ornare quam viverra orci sagittis. In massa tempor nec feugiat nisl. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Sodales ut eu sem integer vitae justo. Tempor id eu nisl nunc mi ipsum faucibus vitae. Orci a scelerisque purus semper eget duis.
     </p>
-        
+            </div>
+    <div class="d-none d-md-block col-md-6">
+    <img src="static/working.jpg" style="height:320px; border-radius:4px;">
+        </div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <div>
         {%for job in jobs%}
@@ -32,9 +38,9 @@
         {%endfor%}
     </div>
     <div class="text-center">
-    <button  class="btn btn-primary btn-lg">Contact us</button>
-        <p class='mt-4'>Copyright 2023, Chi Ting</p>
+    <a href="mailto:hello@gmail.com?subject=Question%20about%20job%20openings" class="btn btn-primary btn-lg">Contact us</a>
     </div>
     </div> 
+        {% include 'footer.html'%}
     </body>    
 </html>
